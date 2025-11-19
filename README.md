@@ -33,4 +33,3 @@ Core: React 19 • Vite 7 • React Router DOM 7 • Axios
 UI: Tailwind v4 • Swiper • Lucide Icons • React Icons
 UX: React Toastify • Smooth animations • Clean code architecture
 
-📦 Installation
