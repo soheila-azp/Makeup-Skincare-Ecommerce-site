@@ -1,4 +1,3 @@
-// src/pages/SearchResults.jsx
 import React, { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "../../components/Product/ProductCard";
@@ -25,7 +24,7 @@ const SearchResults = () => {
   return (
     <div className="p-6">
       <h2 className="text-2xl font-semibold mb-6 text-center">
-        نتایج جستجو برای: <span className="text-indigo-500">{query}</span>
+        Search results for:<span className="text-indigo-500">{query}</span>
       </h2>
 
       {products.length > 0 ? (
@@ -45,7 +44,7 @@ const SearchResults = () => {
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-500">هیچ محصولی یافت نشد.</p>
+        <p className="text-center text-gray-500">There is nothing here!</p>
       )}
     </div>
   );

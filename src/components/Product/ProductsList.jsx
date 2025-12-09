@@ -7,7 +7,7 @@ const ProductsList = () => {
   const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({});
 
-  // گرفتن محصولات از API
+
   const fetchProducts = async (params = {}) => {
     try {
       const res = await getProducts(params);
@@ -17,9 +17,8 @@ const ProductsList = () => {
     }
   };
 
-  // وقتی روی Apply کلیک می‌شه
   const handleApplyFilters = (selectedFilters) => {
-    // فقط فیلدهای پرشده رو نگه می‌داریم
+
     const cleanFilters = {};
     if (selectedFilters.minPrice) cleanFilters.minPrice = selectedFilters.minPrice;
     if (selectedFilters.maxPrice) cleanFilters.maxPrice = selectedFilters.maxPrice;
@@ -31,7 +30,7 @@ const ProductsList = () => {
     fetchProducts(cleanFilters);
   };
 
-  // بار اول بدون فیلتر لود کن
+
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -58,7 +57,7 @@ const ProductsList = () => {
           ))
         ) : (
           <p className="col-span-full text-center text-gray-500">
-            هیچ محصولی پیدا نشد 😕
+            No products found.
           </p>
         )}
       </div>

@@ -13,11 +13,11 @@
 //   )
 // }
 
-// export default SignIn
+
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signIn } from "../../core/services/api/auth"; // مسیر درست فایل api رو تنظیم کن
-import { setItem } from "../../core/services/common/storage.services"; // برای ذخیره توکن
+import { signIn } from "../../core/services/api/auth"; 
+import { setItem } from "../../core/services/common/storage.services"; 
 import { toast } from "react-toastify";
 
 const SignIn = () => {
@@ -34,21 +34,21 @@ const SignIn = () => {
     try {
       const res = await signIn({ email, password });
 
-      // بررسی موفقیت ورود
+    
       if (res.success) {
         toast.success("ورود موفقیت‌آمیز بود 🌸");
 
-        // ذخیره‌ی توکن در localStorage (با تابع کمکی)
+    
         setItem("token", res.token);
 
-        // هدایت به داشبورد یا صفحه اصلی
+
         navigate("/panel");
       } else {
         toast.error(res.message || "ورود ناموفق بود");
       }
     } catch (err) {
       console.error("Sign in error:", err);
-      toast.error("ایمیل یا رمز عبور اشتباه است!");
+      toast.error("ایمیل یا رمز عبور اشتباه است");
     }
   };
 

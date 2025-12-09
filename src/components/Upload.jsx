@@ -28,11 +28,11 @@ function Upload({ productId }) {
         }
       );
 
-      // بک‌اِندت url رو داخل newImage.url برمی‌گردونه
+      
       const uploadedUrl = res.data?.newImage?.url;
 
       if (uploadedUrl) {
-        setImageUrl(`http://localhost:3500${uploadedUrl}`); // چون url بک نسبیه
+        setImageUrl(`http://localhost:3500${uploadedUrl}`);
         setMessage("Uploaded successfully!");
       } else {
         setMessage("Upload succeeded, but no URL returned");

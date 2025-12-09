@@ -36,11 +36,11 @@ const SaleProducts = ({ search, sort, page, limit }) => {
         <Swiper
           modules={[Autoplay]}
           spaceBetween={40}
-          slidesPerView={1} // همیشه فقط یک اسلاید نمایش داده شود
+          slidesPerView={1} 
           loop={true}
-          speed={900} // سرعت ترنزیشن نرم‌تر (میلی‌ثانیه)
+          speed={900} 
           autoplay={{
-            delay: 1500, // هر ۳ ثانیه اسلاید بعدی
+            delay: 1500, 
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}

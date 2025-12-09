@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-10 px-6 mt-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-        {/* Logo & Description */}
+
         <div>
           <h2 className="text-2xl font-bold text-white mb-3">GlowNest</h2>
           <p className="text-sm leading-6">
@@ -15,7 +15,6 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2">
@@ -26,7 +25,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Support */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Support</h3>
           <ul className="space-y-2">
@@ -37,7 +35,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Social Media */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">Follow Us</h3>
           <div className="flex gap-4 text-xl">
@@ -49,10 +46,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Divider */}
       <hr className="border-gray-700 my-8" />
 
-      {/* Copyright */}
       <div className="text-center text-sm text-gray-500">
         © {new Date().getFullYear()} <span className="text-white font-semibold">GlowNest</span> — All rights reserved.
       </div>

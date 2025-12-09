@@ -11,10 +11,9 @@
 //   )
 // }
 
-// export default SignUp
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { signUp } from "../../core/services/api/auth"; // مسیر درست فایل api
+import { signUp } from "../../core/services/api/auth"; 
 import { toast } from "react-toastify";
 
 const SignUp = () => {
@@ -34,7 +33,7 @@ const SignUp = () => {
 
       if (res.success) {
         toast.success("ثبت نام موفقیت‌آمیز بود 🌸");
-        navigate("/"); // هدایت به صفحه ورود بعد از ثبت نام
+        navigate("/"); 
       } else {
         toast.error(res.message || "ثبت نام ناموفق بود");
       }

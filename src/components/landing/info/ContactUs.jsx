@@ -12,7 +12,7 @@ const ContactUs = () => {
           We'd love to hear from you! Reach out through our social networks:
         </p>
 
-        {/* شبکه‌های اجتماعی */}
+
         <div className="flex justify-center gap-6 mb-6">
           <a
             href="https://facebook.com"
@@ -59,9 +59,9 @@ const ContactUs = () => {
         </div>
 
         <div className="text-gray-600 text-sm">
-          <p>📍 Address: 123 Main Street, New York, USA</p>
-          <p>📞 Phone: +1 (555) 123-4567</p>
-          <p>✉️ Email: support@example.com</p>
+          <p> Address: 123 Main Street, New York, USA</p>
+          <p> Phone: +1 (555) 123-4567</p>
+          <p> Email: support@example.com</p>
         </div>
       </div>
     </div>

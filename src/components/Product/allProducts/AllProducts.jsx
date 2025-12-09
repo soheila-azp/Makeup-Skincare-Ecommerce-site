@@ -8,8 +8,6 @@ const AllProducts = () => {
   return (
     <div>
         <h1 className='ml-8 mt-8 text-4xl mb-4 great-vibes text-indigo-900'>All products</h1>
-        {/* <hr/> */}
-        {/* <FilterSortBar/> */}
       <ProductsList/>
     </div>
   )

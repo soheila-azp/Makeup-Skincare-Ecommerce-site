@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import searchIcon from "../../../../assets/icons/search.svg";
+import { Search } from "lucide-react";
 
-const Search = () => {
+const Searching = ({ onSearchClick, onSearchComplete }) => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
@@ -10,33 +10,37 @@ const Search = () => {
     e.preventDefault();
     if (query.trim()) {
       navigate(`/search?q=${query}`);
+      onSearchComplete(); 
     }
   };
 
   return (
     <form
       onSubmit={handleSearch}
-      className="beige w-80 h-8 rounded-lg flex items-center px-2"
+      className="beige w-full sm:w-72 md:w-80 h-10 sm:h-8 rounded-lg flex items-center px-2"
     >
-      <button type="submit">
-        <img
-          src={searchIcon}
-          alt="Search"
-          width={24}
-          height={24}
-          className="bg-pinkish rounded-lg p-1"
-        />
+      <button
+        type="button"
+        onClick={() => {
+          onSearchClick(); 
+        }}
+        className="p-2 sm:p-1"
+      >
+        <Search alt="Search" className="pinkish w-5 h-5" />
       </button>
+
       <input
         type="text"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search..."
-        className="h-full outline-none text-sm ml-2 w-full"
+        className="h-full outline-none text-sm sm:text-base ml-2 w-full rounded-md"
       />
     </form>
   );
 };
 
-export default Search;
+export default Searching;
+
+
 

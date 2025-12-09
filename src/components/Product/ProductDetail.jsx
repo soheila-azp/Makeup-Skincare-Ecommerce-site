@@ -3,45 +3,56 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const ProductDetail = () => {
-  // 🟩 گرفتن آیدی از آدرس URL
   const { id } = useParams();
 
-  // 🟩 نگهداری اطلاعات محصول
+
   const [product, setProduct] = useState(null);
 
-  // 🟩 درخواست به API بر اساس آیدی محصول
-  useEffect(() => {
-    console.log("🟢 useEffect triggered, id:", id);
 
-    // اگر آیدی موجود نبود، متوقف شو
+  useEffect(() => {
+    console.log(" useEffect triggered, id:", id);
+
+
     if (!id) {
-      console.warn("⚠️ No product ID found in URL");
+      console.warn(" No product ID found in URL");
       return;
     }
 
-    // 🟡 دریافت اطلاعات محصول از سرور
+   
     axios
-      .get(`http://localhost:3500/api/v1/products/${id}`)
+      .get(`http://localhost:3500/v1/product/products/${id}`)
       .then((res) => {
-        console.log("✅ API response:", res);
-        console.log("✅ Product data:", res.data);
+        console.log(" API response:", res);
+        console.log(" Product data:", res.data);
         setProduct(res.data);
       })
       .catch((err) => {
-        console.error("❌ Error fetching product:", err);
+        console.error(" Error fetching product:", err);
       });
   }, [id]);
 
-  console.log("🟠 Current product state:", product);
+  console.log(" Current product state:", product);
+  // console.log(`Image URL: http://localhost:3500${product.images[0]}`);
 
-  // 🟩 نمایش لودینگ در صورت عدم وجود داده
+
+
   if (!product)
     return <p className="text-center text-xl p-10 text-gray-500">Loading...</p>;
 
-  // 🟩 نمایش جزئیات محصول
+
   return (
-    <div className="p-8 max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-2xl shadow-lg">
-      <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-100">
+    <div className="p-8 max-w-4xl mx-auto bg-white dark:bg-gray-900 rounded-2xl shadow-lg mt-4">
+      {/* <img src={product.images[0]} alt={product.name} /> */}
+        {product.images?.[0] ? (
+        <img
+          src={`${import.meta.env.VITE_BASE_URL}${product.images[0]}`}
+          alt={product.name}
+          className="mx-auto"
+        />
+      ) : (
+        <p>No image available</p>
+      )}
+      <h1 className="text-4xl font-bold mb-4 text-gray-800 dark:text-gray-100 mt-4">
         {product.name}
       </h1>
 

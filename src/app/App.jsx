@@ -15,7 +15,7 @@ import ProductDetail from '../components/Product/ProductDetail'
 
 const router = createBrowserRouter([
   {
-    element: <Layout />, // Layout شامل Header و Menu
+    element: <Layout />, 
     children: [
       { path: "/", element: <Landing /> },
       { path: "/AllProducts", element: <AllProducts /> },

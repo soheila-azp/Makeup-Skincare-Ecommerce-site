@@ -9,7 +9,7 @@ const Layout = () => {
     <div>
       <Header />
       <Menu />
-      <Outlet /> {/* اینجا محتوای صفحات رندر می‌شه */}
+      <Outlet />
       <Footer/>
     </div>
   );

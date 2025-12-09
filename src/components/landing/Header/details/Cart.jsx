@@ -1,6 +1,7 @@
 import React from 'react'
 import cart from '../../../../assets/icons/cart.svg'
 
+
 const Cart = () => {
   return (
  <div className=" w-40 h-8 flex items-center px-3">

@@ -29,9 +29,9 @@ const ProductsSlider = ({ search, sort, page, limit}) => {
     fetchProducts();
   }, [search, sort, page, limit]);
 
-  // تعداد اسلاید قابل نمایش بسته به تعداد محصولات
+
   const slidesPerView = Math.min(5, products.length);
-  const loopSlides = products.length > 5; // فقط وقتی تعداد اسلاید بیشتر از slidesPerView باشه، loop فعال باشه
+  const loopSlides = products.length > 5;
 
   return (
     <div className="rounded-sm p-6">
@@ -46,11 +46,11 @@ const ProductsSlider = ({ search, sort, page, limit}) => {
           slidesPerView={slidesPerView}
           loop={loopSlides}
           autoplay={{
-            delay: 2000,           // حرکت خودکار هر 2 ثانیه
+            delay: 2000,         
             disableOnInteraction: false,
-            pauseOnMouseEnter: true // اگر موس روی اسلاید رفت، autoplay موقتاً متوقف میشه
+            pauseOnMouseEnter: true 
           }}
-          breakpoints={{           // responsive
+          breakpoints={{         
             320: { slidesPerView: 1 },
             640: { slidesPerView: Math.min(2, products.length) },
             768: { slidesPerView: Math.min(3, products.length) },
@@ -61,9 +61,11 @@ const ProductsSlider = ({ search, sort, page, limit}) => {
           {products.map((product) => (
             <SwiperSlide key={product._id}>
               <ProductCard
+               key={product._id}
+               id={product._id}
                 image={
                   product.images?.length
-                    ? `http://localhost:3500${product.images[0]}`
+                    ? `${import.meta.env.VITE_BASE_URL}${product.images[0]}`
                     : null
                 }
                 name={product.name}

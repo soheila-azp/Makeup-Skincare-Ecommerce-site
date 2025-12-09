@@ -23,7 +23,6 @@ const FilterSortBar = ({ onApplyFilters }) => {
 
   return (
     <div className="flex flex-wrap gap-3 items-center bg-gray-50 p-4 rounded-xl shadow-sm">
-      {/* Price Range */}
       <div className="flex gap-2 items-center">
         <input
           type="number"
@@ -44,7 +43,6 @@ const FilterSortBar = ({ onApplyFilters }) => {
         />
       </div>
 
-      {/* Category */}
       <select
         name="category"
         value={filters.category}
@@ -57,7 +55,6 @@ const FilterSortBar = ({ onApplyFilters }) => {
         <option value="books">Books</option>
       </select>
 
-      {/* In Stock (Checkbox) */}
       <label className="flex items-center gap-2 cursor-pointer">
         <input
           type="checkbox"
@@ -69,7 +66,6 @@ const FilterSortBar = ({ onApplyFilters }) => {
         <span className="text-gray-700 text-sm">In Stock Only</span>
       </label>
 
-      {/* Sort */}
      <select
   name="sort"
   value={filters.sort}
@@ -84,8 +80,6 @@ const FilterSortBar = ({ onApplyFilters }) => {
   <option value="bestselling">Best Selling</option>
 </select>
 
-
-      {/* Apply Button */}
       <button
         onClick={applyFilters}
         className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition"
