@@ -1,12 +1,35 @@
-# React + Vite
+GlowNest – Modern Cosmetics & Skincare E-Commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GlowNest is a fast, elegant, and fully responsive e-commerce application for cosmetics and skincare products.
+Built with React 19, Vite, and Tailwind CSS, it delivers a premium shopping experience with smooth UI, product sliders, and clean modular architecture—perfect for beauty brands.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛍 Full Cosmetics & Skincare Store UI
 
-## Expanding the ESLint configuration
+📦 Product listings, categories, filters, and dynamic product pages
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚡ Ultra-fast performance with Vite
+
+🧭 Modern routing with React Router v7
+
+🖼 Beautiful product sliders & hero banners (Swiper.js)
+
+🎨 Tailwind CSS v4 – fully responsive design
+
+🔔 Toast notifications with React Toastify
+
+🔗 API-ready architecture using Axios
+
+💎 Clean, modern, beauty-focused design
+
+♻️ Reusable components for cards, sliders, sections
+
+📱 Mobile-first layout for real shoppers
+
+🛠 Tech Stack
+
+Core: React 19 • Vite 7 • React Router DOM 7 • Axios
+UI: Tailwind v4 • Swiper • Lucide Icons • React Icons
+UX: React Toastify • Smooth animations • Clean code architecture
+
