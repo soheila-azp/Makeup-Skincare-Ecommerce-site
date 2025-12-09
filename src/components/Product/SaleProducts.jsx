@@ -1,4 +1,3 @@
-// src/components/Products/ProductsSlider.jsx
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -51,7 +50,7 @@ const SaleProducts = ({ search, sort, page, limit }) => {
               <ProductCard
                 image={
                   product.images?.length
-                    ? `http://localhost:3500${product.images[0]}`
+                    ? `${import.meta.env.VITE_BASE_URL}${product.images[0]}`
                     : null
                 }
                 name={product.name}

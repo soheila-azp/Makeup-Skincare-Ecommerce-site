@@ -32,7 +32,7 @@ const SignUp = () => {
       const res = await signUp({ name, email, password });
 
       if (res.success) {
-        toast.success("ثبت نام موفقیت‌آمیز بود 🌸");
+        toast.success("ثبت نام موفقیت‌آمیز بود");
         navigate("/"); 
       } else {
         toast.error(res.message || "ثبت نام ناموفق بود");

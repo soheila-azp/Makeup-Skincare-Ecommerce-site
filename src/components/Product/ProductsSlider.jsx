@@ -1,4 +1,3 @@
-// src/components/Products/ProductsSlider.jsx
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";

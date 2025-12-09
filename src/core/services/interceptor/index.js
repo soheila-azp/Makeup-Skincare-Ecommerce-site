@@ -37,7 +37,7 @@ const onError = (err) => {
 
   else if (status === 401) {
     removeItem("token");
-    toast.error("اجازه دسترسی شما منقضی شد، لطفا دوباره وارد شوید!");
+    toast.error("اجازه دسترسی شما منقضی شد لطفا دوباره وارد شوید!");
     window.location.href = "http://localhost:3005/login";
   }
 

@@ -21,7 +21,7 @@ function Upload({ productId }) {
 
     try {
       const res = await axios.post(
-        `http://localhost:3500/v1/productImage/${productId}/upload`,
+        `${import.meta.env.VITE_BASE_URL}/v1/productImage/${productId}/upload`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -32,7 +32,7 @@ function Upload({ productId }) {
       const uploadedUrl = res.data?.newImage?.url;
 
       if (uploadedUrl) {
-        setImageUrl(`http://localhost:3500${uploadedUrl}`);
+        setImageUrl(`${import.meta.env.VITE_BASE_URL}${uploadedUrl}`);
         setMessage("Uploaded successfully!");
       } else {
         setMessage("Upload succeeded, but no URL returned");

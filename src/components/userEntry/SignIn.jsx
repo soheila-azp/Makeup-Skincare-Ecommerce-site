@@ -36,7 +36,7 @@ const SignIn = () => {
 
     
       if (res.success) {
-        toast.success("ورود موفقیت‌آمیز بود 🌸");
+        toast.success("ورود موفقیت‌آمیز بود");
 
     
         setItem("token", res.token);

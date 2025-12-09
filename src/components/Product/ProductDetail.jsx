@@ -20,7 +20,7 @@ const ProductDetail = () => {
 
    
     axios
-      .get(`http://localhost:3500/v1/product/products/${id}`)
+      .get(`${import.meta.env.VITE_BASE_URL}/v1/product/products/${id}`)
       .then((res) => {
         console.log(" API response:", res);
         console.log(" Product data:", res.data);
@@ -32,7 +32,6 @@ const ProductDetail = () => {
   }, [id]);
 
   console.log(" Current product state:", product);
-  // console.log(`Image URL: http://localhost:3500${product.images[0]}`);
 
 
 
